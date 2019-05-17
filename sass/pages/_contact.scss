@@ -1,6 +1,7 @@
 .contact {
 	form {
 		input, textarea {
+			@include disable-mobile-rounding;
 			margin-top: 25px;
 			font-size: 1em;
 			font-family: $font-body;

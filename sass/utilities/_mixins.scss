@@ -47,3 +47,9 @@
 	-webkit-user-select: none;
 	-ms-user-select: none;
 }
+
+// undo mobile forms
+@mixin disable-mobile-rounding {
+	border-radius: 0;
+	-webkit-appearance: none;
+}
