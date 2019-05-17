@@ -12,11 +12,17 @@ $grey: #d3d3d3;
 $turquoise: #40E0D0;
 
 
-//breakpoints
+// breakpoints
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+
+// preemtive breakpoints
+$sm-pre: 676px;
+$md-pre: 868px;
+$lg-pre: 1092px;
+$xl-pre: 1300px;
 
 // navbar and footer sizes
 $navbar-h: 150px;

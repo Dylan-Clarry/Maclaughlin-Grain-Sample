@@ -7,6 +7,7 @@
 	width: 100%;
 
 	img {
+		@include undraggable-img;
 		height: 80px;
 		margin-top: 30px;
 	}
@@ -119,13 +120,13 @@
 }
 
 // change between normal menu and hamburger menu
-@media(min-width: $md + 100px) {
+@media(min-width: $md-pre) {
 	#navbar-mobile {
 		display: none;
 	}
 }
 
-@media(max-width: $md + 100px) {
+@media(max-width: $md-pre) {
 	#navbar-desktop {
 		display: none;
 	}
@@ -136,7 +137,7 @@
 .main {
 	margin-top: $navbar-h;
 	margin-bottom: 75px;
-	padding-bottom: $footer-h;
-	min-height: calc(100vh - 200px); // $footer-h does not work here!
+	//padding-bottom: $footer-h;
+	min-height: calc(100vh - 400px); // $footer-h does not work here!
 	overflow: auto;
 }

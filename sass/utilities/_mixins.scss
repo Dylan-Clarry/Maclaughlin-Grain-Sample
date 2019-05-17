@@ -37,3 +37,13 @@
 	-moz-user-select: none;
 	user-select: none;
 }
+
+// undraggable image
+@mixin undraggable-img {
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}

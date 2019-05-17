@@ -13,14 +13,14 @@
 }
 
 // medium size
-@media(min-width: $md + 100px) {
+@media(min-width: $md-pre) {
 	.container {
 		max-width: $md;
 	}
 }
 
 // large size
-@media(min-width: $lg + 100px) {
+@media(min-width: $lg-pre) {
 	.container {
 		max-width: $lg;
 	}

@@ -1,4 +1,45 @@
 .contact {
+	form {
+		input, textarea {
+			margin-top: 25px;
+			font-size: 1em;
+			font-family: $font-body;
+		}
+
+		input:focus, textarea:focus {
+			outline: none;
+		}
+
+		textarea {
+			border-bottom: 1px solid $black;
+		}
+
+		input[type=text] {
+			border: none;
+			border-bottom: 1px solid $black;
+			//padding-bottom: 5px;
+		}
+
+		input[type=text], textarea {
+			width: 100%;
+		}
+
+		input[type=submit] {
+			border: 1px solid $black;
+			padding: 5px 25px;
+			width: 30%;
+			float: right;
+		}
+
+		input[type=submit]:hover {
+			cursor: pointer;
+			border-color: $turquoise;
+			color: $turquoise;
+			transition:
+				border-color 0.2s ease,
+				color 0.2s;
+		}
+	}
 
 	img {
 		width: 100%;
@@ -15,41 +56,28 @@
 		line-height: 30px;
 	}
 
-	.box-header {
-		padding-left: 25px;
-	}
-
 	.box-info {
-		padding-left: 25px;
+		margin-bottom: 50px;
+	}
+}
+@media(min-width: $md-pre) {
+	.contact {
+		.box-info {
+			margin-bottom: 0;
+		}
 	}
 }
 
-@media(min-width: $md + 100px) {
+@media(min-width: $md-pre) {
 	.contact {
-		display: grid;
-		grid-template-columns: 2fr 1fr;
-
-
-		.box-header {
-			grid-column-start: 1;
-			grid-column-end: 3;
-			grid-row-start: 1;
-
-			padding-left: 0;
-		}
-
 		.box-info {
-			max-width: 80%;
-			grid-column-start: 1;
-			grid-column-end: 2;
-			grid-row-start: 2;
-
-			padding-left: 0;
+			float: left;
 		}
 		
 		.box-form {
-			grid-column-start: 2;
-			grid-column-end: 4;
+			margin-top: 50px;
+			width: 60%;
+			float: right;
 		}
 	}
 }
