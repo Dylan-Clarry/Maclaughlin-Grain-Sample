@@ -1,7 +1,7 @@
 footer {
 	height: $footer-h;
 	width: 100%;
-	background-color: $lt-grey;
+	background-color: $lt-black;
 	//margin-top: -$footer-h;
 
 	ul {
@@ -17,13 +17,16 @@ footer {
 
 		i {
 			font-size: 30px;
+			color: $white;
 		}
 	}
 
 	.footer-middle {
 		padding-top: 25px;
+
 		a, p {
 			text-align: center;
+			color: $white;
 		}
 	}
 }
