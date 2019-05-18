@@ -1,7 +1,9 @@
 // product
 .product {
+	transition: all 0.1s linear;
 	max-width: 90%;
 	margin: 0 auto;
+	padding: 10px;
 
 	img {
 		@include undraggable-img;
@@ -15,6 +17,11 @@
 	.price {
 		float: right;
 	}
+
+	&:hover {
+        @include product-hover;
+        cursor: pointer;
+    }
 }
 
 // small screen size
