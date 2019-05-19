@@ -19,3 +19,19 @@ a:hover {
 	opacity: 0.5;
 	transition: opacity 0.2s;
 }
+
+.hide-overflow {
+	overflow: hidden;
+}
+
+.hide-tag {
+	display: none;
+}
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}

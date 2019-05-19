@@ -24,7 +24,7 @@ form {
 		width: 100%;
 	}
 
-	input[type=submit] {
+	.submit-btn {
 		-webkit-appearance: none;
 		border: 1px solid $black;
 		padding: 5px 25px;
@@ -32,12 +32,67 @@ form {
 		float: right;
 	}
 
-	input[type=submit]:hover {
+	.submit-btn:hover {
 		cursor: pointer;
+		background-color: $turquoise;
 		border-color: $turquoise;
-		color: $turquoise;
+		color: $white;
 		transition:
+			background-color 0.2s,
 			border-color 0.2s ease,
 			color 0.2s;
 	}
+
+	.delete-btn {
+		-webkit-appearance: none;
+		border: 2px solid $dk-red;
+		color: $dk-red;
+		padding: 5px 25px;
+		width: 30%;
+		font-size: 1em;
+		font-family: $font-body;
+		float: left;
+		margin-top: 25px;
+		background: linear-gradient(to right, $dk-red 50%, white 50%);
+		background-size: 200% 100%;
+	    background-position: right bottom;
+	    transition: all 0.2s ease-out;
+	}
+
+	.delete-btn:hover {
+		cursor: pointer;
+		background-position: left bottom;
+		color: $white;
+	}
+
+	.cancel-btn {
+		-webkit-appearance: none;
+		border: 2px solid $dk-mustard;
+		color: $dk-mustard;
+		padding: 5px 25px;
+		width: 30%;
+		font-size: 1em;
+		font-family: $font-body;
+		float: left;
+		margin-top: 25px;
+		background: linear-gradient(to right, $dk-mustard 50%, white 50%);
+		background-size: 200% 100%;
+	    background-position: right bottom;
+	    transition: all 0.2s ease-out;
+	}
+
+	.cancel-btn:hover {
+		cursor: pointer;
+		background-position: left bottom;
+		color: $white;
+	}
 }
+
+.modal {
+	input[type=text], input[type=file] {
+		margin-bottom: 50px;
+	}
+}
+
+
+

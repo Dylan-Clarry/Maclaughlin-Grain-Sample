@@ -33,7 +33,7 @@
 
 				<nav class="nav">
 					<ul>
-						<li><a class="current-page" href="index.html">Shop</a></li>
+						<li><a href="index.html">Shop</a></li>
 						<li><a href="./about.html">About</a></li>
 						<li><a href="./contact.html">Contact</a></li>
 					</ul>
@@ -43,7 +43,7 @@
 			<div id="navbar-desktop">
 				<nav>
 					<ul>
-						<li><a class="current-page" href="index.html">Shop</a></li>
+						<li><a href="index.html">Shop</a></li>
 						<li><a href="./about.html">About</a></li>
 						<li><a href="./contact.html">Contact</a></li>
 					</ul>
@@ -53,50 +53,298 @@
 	</header><!-- /navbar -->
 	
 	<div class="main">
-		<div class="container">
-			<div class="shop grid">
-				<div class="product">
-					<button></button>
-					<img src="./assets/sample/whale.png" alt="product">
-					<p class="name">Whale</p>
-					<p class="price">12.00</p>
+		<div class="container admin-page">
+			<h1>Admin Dashboard</h1>
+			<div class="grid">
+
+
+
+
+
+
+
+
+
+
+
+
+				<div data-target="modal-new" data-toggle="modal" class="product new-product">
+					<img data-target="modal-new" data-toggle="modal" src="./assets/sample/new-board.png" alt="product">
+					<p data-target="modal-new" data-toggle="modal" class="name">New Product</p>
+					<p data-target="modal-new" data-toggle="modal" class="price">+</p>
+
+					<span class="fill-div"></span>
 				</div><!-- /product -->
 
-				<div class="product">
-					<img src="./assets/sample/giant-sword.png" alt="product">
-					<p class="name">Giant Sword</p>
-					<p class="price">120.00</p>
+				<div id="modal-new" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<h1>New Product</h1>
+						<br>
+						<form action="">
+							<p>Product Name:</p>
+							<input id="name" name="name" placeholder="Product Name" type="text">
+							<br>
+							<br>
+							<p>Product Price:</p>
+							<input id="price" name="price" placeholder="Product Price" type="text" >
+							<br>
+							<br>
+							<br>
+							<p>Product Image:</p>
+							<input id="product-image" name="product-image" type="file" accept="image/jpeg, image/png">
+							<br>
+							<br>
+							<p>Product Description:</p>
+							<textarea name="description" id="description" placeholder="description (optional)" cols="30" rows="10"></textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit" value="Create New Product">
+						</form>
+					</div>
+				</div><!-- /modal-new -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div data-target="modal_0" data-toggle="modal" class="product">
+					<img data-target="modal_0" data-toggle="modal" src="./assets/sample/whale.png" alt="product">
+					<p data-target="modal_0" data-toggle="modal" class="name">Whale</p>
+					<p data-target="modal_0" data-toggle="modal" class="price">12.00</p>
+
+					<span class="fill-div"></span>
 				</div><!-- /product -->
 
-				<div class="product">
-					<img src="./assets/sample/energy-sword.png" alt="product">
-					<p class="name">Energy Sword</p>
-					<p class="price">1250.00</p>
+				<div id="modal_0" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/whale.png" alt="product">
+						<h1>Edit</h1>
+						<br>
+						<form action="">
+							<p>Product Name:</p>
+							<input id="name" name="name" placeholder="Product Name" type="text" value="Whale">
+							<p>Product Price:</p>
+							<input id="price" name="price" placeholder="Product Price" type="text" value="12.00">
+							<p>Product Image:</p>
+							<input id="product-image" name="product-image" type="file" accept="image/jpeg, image/png">
+							<p>Product Description:</p>
+							<textarea name="description" id="description" placeholder="description" cols="30" rows="10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at viverra felis. Sed ante purus, elementum congue egestas ut, commodo vitae tellus. Praesent aliquam tellus et nulla scelerisque, eget euismod nunc dignissim. Ut turpis arcu, ultricies ut sapien et, feugiat pulvinar sem.</textarea>
+							<button class="delete-btn" data-target="modal-delete" data-toggle="modal" data-dismiss="modal">Delete</button>
+							<input class="submit-btn" id="submit" type="submit" value="Edit Product">
+						</form>
+					</div>
+				</div><!-- /modal -->
+
+				<div id="modal-delete" class="modal">
+					<div class="modal-window small product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/whale.png" alt="product">
+						<p>Whale</p>
+						<br>
+						<p>12.00</p>
+						<br>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at viverra felis. Sed ante purus, elementum congue egestas ut, commodo vitae tellus. Praesent aliquam tellus et nulla scelerisque, eget euismod nunc dignissim. Ut turpis arcu, ultricies ut sapien et, feugiat pulvinar sem.</p>
+						<h1>Delete this item?</h1>
+						<br>
+						<form action="">
+
+							<input class="hide-tag" name="id" type="text" value="_id">
+							
+							<button class="cancel-btn" data-dismiss="modal">Cancel</button>
+							<input class="delete-btn float-right" id="submit" type="submit" value="Delete">
+						</form>
+					</div>
+				</div><!-- /modal-delete -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div data-target="modal_1" data-toggle="modal" class="product">
+					<img data-target="modal_1" data-toggle="modal" src="./assets/sample/giant-sword.png" alt="product">
+					<p data-target="modal_1" data-toggle="modal" class="name">Giant Sword</p>
+					<p data-target="modal_1" data-toggle="modal" class="price">120.00</p>
 				</div><!-- /product -->
 
-				<div class="product">
-					<img src="./assets/sample/money-tree-plank.png" alt="product">
-					<p class="name">Money Tree Plank</p>
-					<p class="price">23.00</p>
+				<div id="modal_1" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/giant-sword.png" alt="product">
+						<p>Request this item: &nbsp&nbsp Giant Sword - 120.00 CAD</p>
+						<br>
+						<p class="small-print">*As each product is unique they are available by request only</p>
+						<form action="">
+							<input id="name" name="name" placeholder="Your Name" type="text">
+							<br>
+							<input id="email" name="email" placeholder="Your Email" type="text">
+							<br>
+							<input id="phone-number" name="phone-number" placeholder="Your Phone Number (optional)" type="text">
+							<br>
+							<textarea name="message" id="message" placeholder="Message" cols="30" rows="10">Hi! Is this item still available?</textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div data-target="modal_2" data-toggle="modal" class="product">
+					<img data-target="modal_2" data-toggle="modal" src="./assets/sample/energy-sword.png" alt="product">
+					<p data-target="modal_2" data-toggle="modal" class="name">Energy Sword</p>
+					<p data-target="modal_2" data-toggle="modal" class="price">1250.00</p>
 				</div><!-- /product -->
 
-				<div class="product">
-					<img src="./assets/sample/just-a-plank.png" alt="product">
-					<p class="name">Just a Plank</p>
-					<p class="price">23.00</p>
+				<div id="modal_2" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/energy-sword.png" alt="product">
+						<p>Request this item: &nbsp&nbsp Energy Sword - 1250.00 CAD</p>
+						<br>
+						<p class="small-print">*As each product is unique they are available by request only</p>
+						<form action="">
+							<input id="name" name="name" placeholder="Your Name" type="text">
+							<br>
+							<input id="email" name="email" placeholder="Your Email" type="text">
+							<br>
+							<input id="phone-number" name="phone-number" placeholder="Your Phone Number (optional)" type="text">
+							<br>
+							<textarea name="message" id="message" placeholder="Message" cols="30" rows="10">Hi! Is this item still available?</textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div data-target="modal_3" data-toggle="modal" class="product">
+					<img data-target="modal_3" data-toggle="modal" src="./assets/sample/money-tree-plank.png" alt="product">
+					<p data-target="modal_3" data-toggle="modal" class="name">Money Tree Plank</p>
+					<p data-target="modal_3" data-toggle="modal" class="price">23.00</p>
 				</div><!-- /product -->
 
-				<div class="product">
-					<img src="./assets/sample/the-zeus.png" alt="product">
-					<p class="name">The Zeus</p>
-					<p class="price">45.00</p>
+				<div id="modal_3" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/money-tree-plank.png" alt="product">
+						<p>Request this item: &nbsp&nbsp Money Tree Plank - 23.00 CAD</p>
+						<br>
+						<p class="small-print">*As each product is unique they are available by request only</p>
+						<form action="">
+							<input id="name" name="name" placeholder="Your Name" type="text">
+							<br>
+							<input id="email" name="email" placeholder="Your Email" type="text">
+							<br>
+							<input id="phone-number" name="phone-number" placeholder="Your Phone Number (optional)" type="text">
+							<br>
+							<textarea name="message" id="message" placeholder="Message" cols="30" rows="10">Hi! Is this item still available?</textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div data-target="modal_4" data-toggle="modal" class="product">
+					<img data-target="modal_4" data-toggle="modal" src="./assets/sample/just-a-plank.png" alt="product">
+					<p data-target="modal_4" data-toggle="modal" class="name">Just a Plank</p>
+					<p data-target="modal_4" data-toggle="modal" class="price">23.00</p>
 				</div><!-- /product -->
 
-				<div class="product">
-					<img src="./assets/sample/cookie-axe.png" alt="product">
-					<p class="name">Cookie Axe</p>
-					<p class="price">200.00</p>
+				<div id="modal_4" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/just-a-plank.png" alt="product">
+						<p>Request this item: &nbsp&nbsp Just a Plank - 23.00 CAD</p>
+						<br>
+						<p class="small-print">*As each product is unique they are available by request only</p>
+						<form action="">
+							<input id="name" name="name" placeholder="Your Name" type="text">
+							<br>
+							<input id="email" name="email" placeholder="Your Email" type="text">
+							<br>
+							<input id="phone-number" name="phone-number" placeholder="Your Phone Number (optional)" type="text">
+							<br>
+							<textarea name="message" id="message" placeholder="Message" cols="30" rows="10">Hi! Is this item still available?</textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div data-target="modal_5" data-toggle="modal" class="product">
+					<img data-target="modal_5" data-toggle="modal" src="./assets/sample/the-zeus.png" alt="product">
+					<p data-target="modal_5" data-toggle="modal" class="name">The Zeus</p>
+					<p data-target="modal_5" data-toggle="modal" class="price">45.00</p>
 				</div><!-- /product -->
+
+				<div id="modal_5" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/the-zeus.png" alt="product">
+						<p>Request this item: &nbsp&nbsp The Zeus - 45.00 CAD</p>
+						<br>
+						<p class="small-print">*As each product is unique they are available by request only</p>
+						<form action="">
+							<input id="name" name="name" placeholder="Your Name" type="text">
+							<br>
+							<input id="email" name="email" placeholder="Your Email" type="text">
+							<br>
+							<input id="phone-number" name="phone-number" placeholder="Your Phone Number (optional)" type="text">
+							<br>
+							<textarea name="message" id="message" placeholder="Message" cols="30" rows="10">Hi! Is this item still available?</textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit">
+						</form>
+					</div>
+				</div>
+
+				<div data-target="modal_6" data-toggle="modal" class="product">
+					<img data-target="modal_6" data-toggle="modal" src="./assets/sample/cookie-axe.png" alt="product">
+					<p data-target="modal_6" data-toggle="modal" class="name">Cookie Axe</p>
+					<p data-target="modal_6" data-toggle="modal" class="price">200.00</p>
+				</div><!-- /product -->
+
+				<div id="modal_6" class="modal">
+					<div class="modal-window product-modal">
+						<span class="close" data-dismiss="modal">&times;</span>
+						<img data-target="modal_0" data-toggle="modal" src="./assets/sample/cookie-axe.png" alt="product">
+						<p>Request this item: &nbsp&nbsp Cookie Axe - 200.00 CAD</p>
+						<br>
+						<p class="small-print">*As each product is unique they are available by request only</p>
+						<form action="">
+							<input id="name" name="name" placeholder="Your Name" type="text">
+							<br>
+							<input id="email" name="email" placeholder="Your Email" type="text">
+							<br>
+							<input id="phone-number" name="phone-number" placeholder="Your Phone Number (optional)" type="text">
+							<br>
+							<textarea name="message" id="message" placeholder="Message" cols="30" rows="10">Hi! Is this item still available?</textarea>
+							<br>
+							<input class="submit-btn" id="submit" type="submit">
+						</form>
+					</div>
+				</div>
 
 			</div><!-- /grid -->
 		</div><!-- /container -->
